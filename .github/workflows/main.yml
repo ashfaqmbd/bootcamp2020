@@ -30,7 +30,7 @@ jobs:
       run: npm install -g surge
     
     - name: Run Surge
-      run: surge ./ashfaqmbd.surge.sh --token ${{secrets.SURGE-TOKEN}}
+      run: surge ./ashfaqmbd.surge.sh --token ${{secrets.ABC}}
       
         
              
