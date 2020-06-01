@@ -22,12 +22,14 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: installjs
-      uses: actions/setup.node@v2-beta
+    - name: Install NodeJS
+      uses: actions/setup-node@v2-beta
       with:
         node-version:12
-    name: Install Surge
-    run: npm install -g surge
-    name: Run Surge
-    run: surge ./ashfaqmbd.surge.sh --token ${{secrets.SURGE-TOKEN}}
+    
+    - name: Install Surge
+      run: npm install -g surge
+     
+    - name: Run Surge
+      run: surge ./ ashfaqmbd.surge.sh --token ${{secrets.ABC}}
       
